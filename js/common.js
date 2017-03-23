@@ -1114,6 +1114,7 @@ $(function () {
 
 				$thisSlider.on('initialized.owl.carousel', function () {
 					setSameHeight();
+					$('#videos').lightGallery();
 				});
 
 				$thisSlider.owlCarousel({
@@ -1267,22 +1268,13 @@ $(function () {
 	if ($lightGallery.length) {
 		$.each($lightGallery, function () {
 			var $thisGallery = $(this);
-			$thisGallery.lightGallery({
-				thumbnail:true,
-				animateThumb: true,
-				showThumbByDefault: false
-			});
+			if(!$thisGallery.hasClass('.owl-carousel')){
+				$thisGallery.lightGallery({
+					thumbnail:true,
+					animateThumb: true,
+					showThumbByDefault: false
+				});
+			}
 		})
 	}
-
-	var $lightVideo = $('.light-video-js');
-
-	if ($lightVideo.length) {
-		$.each($lightVideo, function () {
-			var $thisGallery = $(this);
-			$thisGallery.lightGallery();
-		})
-	}
-
-	$('#videos').lightGallery();
 });
