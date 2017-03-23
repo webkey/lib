@@ -1260,3 +1260,29 @@ $(function () {
 
 	tapeGalleryInit();
 });
+
+$(function () {
+	var $lightGallery = $('.light-gallery-js');
+
+	if ($lightGallery.length) {
+		$.each($lightGallery, function () {
+			var $thisGallery = $(this);
+			$thisGallery.lightGallery({
+				thumbnail:true,
+				animateThumb: true,
+				showThumbByDefault: false
+			});
+		})
+	}
+
+	var $lightVideo = $('.light-video-js');
+
+	if ($lightVideo.length) {
+		$.each($lightVideo, function () {
+			var $thisGallery = $(this);
+			$thisGallery.lightGallery();
+		})
+	}
+
+	$('#videos').lightGallery();
+});

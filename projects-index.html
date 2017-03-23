@@ -16,6 +16,8 @@
 
 	<!--swiper slider-->
 	<link rel="stylesheet" href="js/lib/swiper/swiper.min.css">
+	<!--light gallery-->
+	<link rel="stylesheet" href="js/lib/lg/css/lightgallery.min.css">
 
 	<link rel="stylesheet" href="css/reset.min.css" />
 	<link rel="stylesheet" href="css/flexboxgrid.min.css" />
@@ -462,48 +464,48 @@
 					</div>
 					<div class="tape-gallery">
 						<div class="swiper-container">
-							<div class="tape-gallery__list swiper-wrapper">
-								<div class="swiper-slide">
+							<div class="tape-gallery__list swiper-wrapper light-gallery-js">
+								<div class="swiper-slide" data-src="userimg/p-img-07.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Вiцебскiя вароты. 1967</p><p>Витебские ворота. 1967</p><p>Vitebsk Gate. 1967</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-07.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-08.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-08.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-09.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-09.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-10.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-10.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-11.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-11.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-12.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-12.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-01.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-01.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-03.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-03.jpg" alt="image description" /></div>
 									</a>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-src="userimg/p-img-04.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
 									<a href="#">
 										<div class="tape-gallery__img"><img src="userimg/p-img-04.jpg" alt="image description" /></div>
 									</a>
@@ -707,6 +709,38 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="project-row content-wrap">
+				<div class="wrap row-slider-container-js">
+					<header class="pr-header">
+						<div class="pr-slider-tool outside-nav-slider-js nav-circle">&nbsp;</div>
+						<div class="pr-header__holder">
+							<h2>Общая информация</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
+					</header>
+					<div class="pr-announce">
+						<div class="pr-announce__list owl-carousel" id="videos">
+							<div class="pr-announce-item" data-src="https://www.youtube.com/watch?v=meBbDqAXago" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+								<a href="" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-01.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Война 1812 г. на территории беларуси</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 
 		<div class="l-footer">
@@ -789,6 +823,16 @@
 	<script src="js/lib/swiper/swiper.min.js"></script>
 	<!--matchHeight-->
 	<script src="js/lib/jquery.matchHeight-min.js"></script>
+	<!--light gallery-->
+	<script src="js/lib/lg/js/lightgallery.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-fullscreen.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-thumbnail.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-video.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-autoplay.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-zoom.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-hash.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-pager.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-share.min.js"></script>
 
 	<script type="text/javascript" src="js/common.js"></script>
 </body>
