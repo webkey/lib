@@ -106,6 +106,8 @@ if (desktop === false) {
 
 $(document).ready(function() {
 
+	commonUserEvents();
+
 	if ($('.js-l-pub').length > 0) {
 		pubLayout();
 	}
@@ -135,6 +137,11 @@ $(document).ready(function() {
 	}
 
 });
+
+
+var commonUserEvents = function() {
+
+}
 
 
 if ($('.l-service').length > 0) {
@@ -1033,50 +1040,6 @@ function datePicker() {
 	});
 }
 
-$(function () {
-	/*years slider*/
-	var $slidersYears = $('.years-slider-js');
-	if ($slidersYears.length) {
-		$slidersYears.each(function () {
-			var $thisSlider = $(this);
-			var $wrap = $thisSlider.parent();
-			var $thisBtnNext = $('.swiper-button-next', $wrap);
-			var $thisBtnPrev = $('.swiper-button-prev', $wrap);
-
-			new Swiper($thisSlider, {
-				loop: false,
-				slidesPerView: 'auto',
-				watchSlidesVisibility: true,
-				keyboardControl: false,
-
-				nextButton: $thisBtnNext,
-				prevButton: $thisBtnPrev
-			});
-		});
-	}
-});
-
-$(function () {
-	/*select row date by one*/
-	var $group = $('.step-group-js');
-	var $row = $('.search__row', $group);
-	var $check = $(':radio', $group);
-	var noActiveClass = 'no-active';
-
-	if ($group.length) {
-		$.each($check, function () {
-			var $currentCheck = $(this);
-
-			$currentCheck.on('change', function () {
-				var $thisCheck = $(this);
-
-				$row.addClass(noActiveClass);
-				$thisCheck.closest($row).removeClass(noActiveClass);
-			})
-		});
-	}
-});
-
 // $('.js-readmore').readmore({
 // 	speed: 75,
 // 	collapsedHeight: 175,
@@ -1085,178 +1048,39 @@ $(function () {
 // 	lessLink: '<a href="#" class="expand-link dotted">Свернуть</a>'
 // });
 
-$(function () {
-	var navArrowByCircle = [
-		'<div class="slider-button-circle"><svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M11.262,16.714l9.002,8.999  c0.395,0.394,1.035,0.394,1.431,0c0.395-0.394,0.395-1.034,0-1.428L13.407,16l8.287-8.285c0.395-0.394,0.395-1.034,0-1.429  c-0.395-0.394-1.036-0.394-1.431,0l-9.002,8.999C10.872,15.675,10.872,16.325,11.262,16.714z" fill="#000" fill-rule="evenodd"/></svg><span>Назад</span></div>',
-		'<div class="slider-button-circle"><svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M21.698,15.286l-9.002-8.999  c-0.395-0.394-1.035-0.394-1.431,0c-0.395,0.394-0.395,1.034,0,1.428L19.553,16l-8.287,8.285c-0.395,0.394-0.395,1.034,0,1.429  c0.395,0.394,1.036,0.394,1.431,0l9.002-8.999C22.088,16.325,22.088,15.675,21.698,15.286z" fill="#000" fill-rule="evenodd"/></svg><span>Вперед</span></div>'
-	];
 
-	function rowSlidersInit() {
-		var $rowSliderContainer = $('.row-slider-container-js');
-		if ($rowSliderContainer.length > 0) {
+if ($('.p-list').length > 0) {
 
-			$.each($rowSliderContainer, function () {
-				var $thisSliderContainer = $(this);
-				var $thisSlider = $('.owl-carousel', $thisSliderContainer);
-				var $navContainer = $('.outside-nav-slider-js', $thisSliderContainer);
-				var timeout;
-
-				function setSameHeight() {
-					var options = {
-						byRow: true,
-						property: 'height',
-						target: null,
-						remove: false
-					};
-
-					$('.owl-item', $thisSlider).matchHeight(options);
-				}
-
-				$thisSlider.on('initialized.owl.carousel', function () {
-					setSameHeight();
-				});
-
-				$thisSlider.owlCarousel({
-					items: 3,
-					slideBy: 3,
-					nav: true,
-					margin: 30,
-					navContainer: $navContainer,
-					navText: navArrowByCircle,
-					responsive: {
-						0: {
-							items: 1,
-							slideBy: 1
-						},
-						300: {
-							items: 1,
-							slideBy: 1
-						},
-						500: {
-							items: 2,
-							slideBy: 2
-						},
-						992: {
-							items: 3,
-							slideBy: 3
-						}
-					}
-				}).on('resized.owl.carousel', function () {
-					clearTimeout(timeout);
-
-					timeout = setTimeout(function () {
-						setSameHeight();
-					}, 100);
-				});
-			})
-
-		}
-	}
-
-	rowSlidersInit();
-
-	function booksSlidersInit() {
-		var $booksSliderContainer = $('.books-slider-container-js');
-		if ($booksSliderContainer.length > 0) {
-
-			$.each($booksSliderContainer, function () {
-				var $thisSliderContainer = $(this);
-				var $thisSlider = $('.owl-carousel', $thisSliderContainer);
-				var $navContainer = $('.outside-nav-slider-js', $thisSliderContainer);
-
-				$thisSlider.owlCarousel({
-					items: 5,
-					slideBy: 5,
-					nav: true,
-					margin: 30,
-					navContainer: $navContainer,
-					navText: navArrowByCircle,
-					responsive: {
-						0: {
-							items: 1,
-							slideBy: 1
-						},
-						380: {
-							items: 2,
-							slideBy: 2
-						},
-						480: {
-							items: 2,
-							slideBy: 2
-						},
-						640: {
-							items: 3,
-							slideBy: 3
-						},
-						992: {
-							items: 4,
-							slideBy: 4
-						},
-						1100: {
-							items: 5,
-							slideBy: 5
-						}
-					}
-				});
-			})
-
-		}
-	}
-
-	booksSlidersInit();
-});
-
-$(function () {
-	function createMediaEq() {
-		var $eqContainer = $('.media-track__eq');
-		var eqLength = 50;
-		var minSize = 0;
-		var maxSize = 50;
-		var eqColWidth = 100/eqLength +'%';
-
-		$.each($eqContainer, function () {
-			var $thisContainer = $(this);
-
-			for(var i = 0; i < eqLength; i++) {
-				var eqColHeight = getRandomInt(minSize,maxSize);
-				$('<span class="eq-col"></span>').appendTo($thisContainer).css({
-					'height': eqColHeight,
-					'width': eqColWidth
-				});
+	$('.p-list .owl-carousel').owlCarousel({
+		items: 5,
+		slideBy: 5,
+		nav: true,
+		navText: [
+			'<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M11.262,16.714l9.002,8.999  c0.395,0.394,1.035,0.394,1.431,0c0.395-0.394,0.395-1.034,0-1.428L13.407,16l8.287-8.285c0.395-0.394,0.395-1.034,0-1.429  c-0.395-0.394-1.036-0.394-1.431,0l-9.002,8.999C10.872,15.675,10.872,16.325,11.262,16.714z" fill="#000" fill-rule="evenodd"/></svg>',
+			'<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M21.698,15.286l-9.002-8.999  c-0.395-0.394-1.035-0.394-1.431,0c-0.395,0.394-0.395,1.034,0,1.428L19.553,16l-8.287,8.285c-0.395,0.394-0.395,1.034,0,1.429  c0.395,0.394,1.036,0.394,1.431,0l9.002-8.999C22.088,16.325,22.088,15.675,21.698,15.286z" fill="#000" fill-rule="evenodd"/></svg>'
+		],
+		responsive: {
+			0: {
+				items: 1,
+				slideBy: 1
+			},
+			540: {
+				items: 2,
+				slideBy: 2
+			},
+			767: {
+				items: 3,
+				slideBy: 3
+			},
+			1024: {
+				items: 4,
+				slideBy: 4
+			},
+			1280: {
+				items: 5,
+				slideBy: 5
 			}
-		});
-
-		function getRandomInt(min, max) {
-			return Math.floor(Math.random() * (max - min)) + min;
 		}
-	}
+	});
 
-	createMediaEq();
-});
-
-$(function () {
-	/*tape gallery*/
-	function tapeGalleryInit() {
-		var $tapeGalleryContainer = $('.tape-gallery-container-js');
-		if ($tapeGalleryContainer.length) {
-			$tapeGalleryContainer.each(function () {
-				var $thisContainer = $(this);
-				var $thisSlider = $('.swiper-container', $thisContainer);
-				var $thisBtnNext = $('.swiper-button-next', $thisContainer);
-				var $thisBtnPrev = $('.swiper-button-prev', $thisContainer);
-
-				new Swiper($thisSlider, {
-					loop: false,
-					slidesPerView: 'auto',
-					watchSlidesVisibility: true,
-					keyboardControl: false,
-
-					nextButton: $thisBtnNext,
-					prevButton: $thisBtnPrev
-				});
-			});
-		}
-	}
-
-	tapeGalleryInit();
-});
+}

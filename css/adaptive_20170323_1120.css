@@ -186,9 +186,6 @@
 	.content-wrap {
 		padding: 0;
 	}
-	.content-wrap.project-row {
-		padding: 3rem 0;
-	}
 
 	.l-infoblock {
 		padding: 0;
@@ -332,32 +329,8 @@
 	.header-heading {
 		padding: 2rem 1rem 0;
 	}
-	
-	/*project books slider*/
-	.pr-books-item__content{
-		top: auto;
-		bottom: 0;
-		width: 100%;
-		height: auto;
-		max-height: 100%;
-		padding: 8% 10%;
-		background: rgba(0, 0, 0, 0.49);
-		opacity: 1;
-		visibility: visible;
-	}
-	.pr-books-item__text{
-		overflow: hidden;
-		position: relative;
-		top: auto;
-		max-height: 100%;
-	}
-	.pr-books-item__text,
-	.pr-books-item__inner:hover .pr-books-item__text{
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-	}
-	/*project books slider end*/
+
+
 }
 
 @media only screen and (max-width: 579px) {

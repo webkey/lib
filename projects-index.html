@@ -14,6 +14,9 @@
 	<meta property="og:description" content="" />
 	<meta property="og:site_name" content="" />
 
+	<!--swiper slider-->
+	<link rel="stylesheet" href="js/lib/swiper/swiper.min.css">
+
 	<link rel="stylesheet" href="css/reset.min.css" />
 	<link rel="stylesheet" href="css/flexboxgrid.min.css" />
 	<link rel="stylesheet" href="css/screen.css" />
@@ -155,7 +158,7 @@
 		</header>
 
 		<div class="l-imgheader">
-			<img src="userimg/img-12.jpg" alt="" class="imgheader-img">
+			<img src="userimg/p-imgheader.jpg" alt="" class="imgheader-img">
 			<div class="backnav backnav--black wrap">
 				<a href="#" title="Главная"><span>Главная</span></a>
 				<a href="#" title="О библиотеке"><span>О библиотеке</span></a>
@@ -227,36 +230,483 @@
 			</div>
 
 			<section class="project-row content-wrap">
-				<div class="wrap">
+				<div class="wrap row-slider-container-js">
 					<header class="pr-header">
-						{{pr-slider-header}}
+						<div class="pr-slider-tool outside-nav-slider-js nav-circle">&nbsp;</div>
+						<div class="pr-header__holder">
+							<h2>Общая информация</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
 					</header>
-					{{pr-slider}}
+					<div class="pr-announce">
+						<div class="pr-announce__list owl-carousel">
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-01.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Война 1812 г. на территории беларуси</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-02.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Хроника мероприятий к 200-летию военных событий 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/img-15.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Данный порядок разработан в соответствии с Правилами пользования Национальной библиотекой Беларуси, Правилами пользования информационными ресурсами Интернет в читальных залах Национальной библиотеки Беларуси, Правилами копирования информации, Порядком обслуживания документами на электронных носителях и определяет условия обслуживания пользователей в общем читальном зале. В зале обслуживаются школьники старших классов, учащиеся профессионально-технических, средних специальных и высших учебных заведений, специалисты со средним, средним специальным и высшим образованием, в том числе бакалавры, магистранты, аспиранты, соискатели ученой степени. Обслуживание осуществляется путем консультирования, выдачи заказанных из фондохранилища документов, обеспечения доступа к электронным ресурсам и подсобному фонду зала, а также путем выполнения дополнительных (платных) услуг.</p>
+											<p>Пользователям с ослабленным зрением для работы с плоскопечатными документами предоставляется электронная лупа. Зал имеет два территориально разделенных пункта обслуживания: кафедру выдачи заказанных из фондохранилища документов (далее – кафедра выдачи), которая находится на 1-м этаже атриума, и читальный зал (помещение № 105). Режим работы зала соответствует режиму работы Национальной библиотеки Беларуси (далее – Библиотека).</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-03.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Библиотека И.Х. Колодеева – уникальная коллекция реликвий войны 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-02.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Хроника мероприятий к 200-летию военных событий 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section class="project-row content-wrap" style="background-color: #f1f1f1; background-image: url('userimg/');">
-				<div class="wrap">
+			<section class="project-row content-wrap" style="background-color: #f1f1f1; background-position: center center; background-image: url('userimg/p-imgheader-section.jpg');">
+				<div class="wrap books-slider-container-js">
 					<header class="pr-header">
-						{{pr-slider-header}}
+						<div class="pr-slider-tool outside-nav-slider-js nav-circle">&nbsp;</div>
+						<div class="pr-header__holder">
+							<h2>Издания</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
 					</header>
-					{{pr-slider}}
+					<div class="pr-books">
+						<div class="pr-books__list owl-carousel">
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/p-img-04.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/p-img-05.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Издания 1913–2012 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/p-img-06.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Издания 1913–2012 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/p-img-03.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Пользователям с ослабленным зрением для работы с плоскопечатными документами предоставляется электронная лупа. Зал имеет два территориально разделенных пункта обслуживания: кафедру выдачи заказанных из фондохранилища документов (далее – кафедра выдачи), которая находится на 1-м этаже атриума, и читальный зал (помещение № 105). Режим работы зала соответствует режиму работы Национальной библиотеки Беларуси (далее – Библиотека).</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/p-img-02.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Хроника мероприятий к 200-летию военных событий 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/img-11.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-books-item">
+								<a href="#" class="pr-books-item__inner">
+									<div class="pr-books-item__img">
+										<div class="pr-books-item__figure">
+											<img src="userimg/img-12.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-books-item__content">
+										<div class="pr-books-item__text">
+											<p>Издания 1913–2012 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-row">
+				<div class="tape-gallery-container-js">
+					<div class="content-wrap">
+						<div class="wrap">
+							<header class="pr-header">
+								<div class="pr-slider-tool outside-nav-slider-js nav-circle">
+									<div class="swiper-button-prev">
+										<div class="slider-button-circle">
+											<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M11.262,16.714l9.002,8.999  c0.395,0.394,1.035,0.394,1.431,0c0.395-0.394,0.395-1.034,0-1.428L13.407,16l8.287-8.285c0.395-0.394,0.395-1.034,0-1.429  c-0.395-0.394-1.036-0.394-1.431,0l-9.002,8.999C10.872,15.675,10.872,16.325,11.262,16.714z" fill="#000" fill-rule="evenodd"/></svg><span>Назад</span>
+										</div>
+									</div>
+									<div class="swiper-button-next">
+										<div class="slider-button-circle">
+											<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M21.698,15.286l-9.002-8.999  c-0.395-0.394-1.035-0.394-1.431,0c-0.395,0.394-0.395,1.034,0,1.428L19.553,16l-8.287,8.285c-0.395,0.394-0.395,1.034,0,1.429  c0.395,0.394,1.036,0.394,1.431,0l9.002-8.999C22.088,16.325,22.088,15.675,21.698,15.286z" fill="#000" fill-rule="evenodd"/></svg><span>Вперед</span>
+										</div>
+									</div>
+								</div>
+								<div class="pr-header__holder">
+									<h2>Виртуальная галерея</h2>
+									<div class="pr-header__foot">
+										<a href="#">Смотреть все</a>
+									</div>
+								</div>
+							</header>
+						</div>
+					</div>
+					<div class="tape-gallery">
+						<div class="swiper-container">
+							<div class="tape-gallery__list swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-07.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-08.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-09.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-10.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-11.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-12.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-01.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-03.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-04.jpg" alt="image description" /></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<section class="project-row content-wrap">
 				<div class="wrap">
 					<header class="pr-header">
-						{{pr-slider-header}}
+						<div class="pr-header__holder">
+							<h2>Памятники и памятные места</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
 					</header>
-					{{pr-slider}}
+					<div class="pr-pict">
+						<div class="pr-pict__list">
+							<div class="pr-pict-item">
+								<a href="#" class="pr-pict-item__inner">
+									<div class="pr-pict-item__img">
+										<div class="pr-pict-item__figure">
+											<img src="userimg/p-img-13.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-pict-item__content">
+										<div class="pr-pict-item__text">
+											<p>Памятник</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-pict-item">
+								<a href="#" class="pr-pict-item__inner">
+									<div class="pr-pict-item__img">
+										<div class="pr-pict-item__figure">
+											<img src="userimg/p-img-14.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-pict-item__content">
+										<div class="pr-pict-item__text">
+											<p>Памятник</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-pict-item">
+								<a href="#" class="pr-pict-item__inner">
+									<div class="pr-pict-item__img">
+										<div class="pr-pict-item__figure">
+											<img src="userimg/p-img-15.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-pict-item__content">
+										<div class="pr-pict-item__text">
+											<p>Памятник</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-pict-item">
+								<a href="#" class="pr-pict-item__inner">
+									<div class="pr-pict-item__img">
+										<div class="pr-pict-item__figure">
+											<img src="userimg/p-img-16.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-pict-item__content">
+										<div class="pr-pict-item__text">
+											<p>Памятник</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-pict-item">
+								<a href="#" class="pr-pict-item__inner">
+									<div class="pr-pict-item__img">
+										<div class="pr-pict-item__figure">
+											<img src="userimg/p-img-05.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-pict-item__content">
+										<div class="pr-pict-item__text">
+											<p>Памятник</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-pict-item">
+								<a href="#" class="pr-pict-item__inner">
+									<div class="pr-pict-item__img">
+										<div class="pr-pict-item__figure">
+											<img src="userimg/p-imgheader.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-pict-item__content">
+										<div class="pr-pict-item__text">
+											<p>Пользователям с ослабленным зрением для работы с плоскопечатными документами предоставляется электронная лупа. Зал имеет два территориально разделенных пункта обслуживания: кафедру выдачи заказанных из фондохранилища документов (далее – кафедра выдачи), которая находится на 1-м этаже атриума, и читальный зал (помещение № 105). Режим работы зала соответствует режиму работы Национальной библиотеки Беларуси (далее – Библиотека).</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section class="gallery-row" style="background-color: #f1f1f1;">
-				{{gallery-line}}
+			<section class="project-row content-wrap" style="background-color: #f1f1f1;">
+				<div class="wrap row-slider-container-js">
+					<header class="pr-header">
+						<div class="pr-slider-tool outside-nav-slider-js nav-circle">&nbsp;</div>
+						<div class="pr-header__holder">
+							<h2>Слушаем Купалу и Коласа</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
+					</header>
+					<div class="pr-audio">
+						<div class="pr-audio__list owl-carousel">
+							<div class="pr-audio-item">
+								<a class="pr-audio-item__inner">
+									<div class="pr-audio-item__content">
+										<div class="pr-audio-item__text">
+											<p>Купала, Я. Трэба нам песень : верш [Гуказапіс]</p>
+										</div>
+										<div class="media-track">
+											<div class="media-track__tool">
+												<div class="media-track__btn media-track__play">&nbsp;</div>
+											</div>
+											<div class="media-track__eq"></div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-audio-item">
+								<a class="pr-audio-item__inner">
+									<div class="pr-audio-item__content">
+										<div class="pr-audio-item__text">
+											<p>Купала, Я. Трэба нам песень : верш [Гуказапіс]</p>
+										</div>
+										<div class="media-track">
+											<div class="media-track__tool">
+												<div class="media-track__btn media-track__play">&nbsp;</div>
+											</div>
+											<div class="media-track__eq"></div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-audio-item">
+								<a class="pr-audio-item__inner">
+									<div class="pr-audio-item__content">
+										<div class="pr-audio-item__text">
+											<p>Пользователям с ослабленным зрением для работы с плоскопечатными документами.</p>
+										</div>
+										<div class="media-track">
+											<div class="media-track__tool">
+												<div class="media-track__btn media-track__play">&nbsp;</div>
+											</div>
+											<div class="media-track__eq"></div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-audio-item">
+								<a class="pr-audio-item__inner">
+									<div class="pr-audio-item__content">
+										<div class="pr-audio-item__text">
+											<p>Купала, Я. Трэба нам песень : верш [Гуказапіс]</p>
+										</div>
+										<div class="media-track">
+											<div class="media-track__tool">
+												<div class="media-track__btn media-track__play">&nbsp;</div>
+											</div>
+											<div class="media-track__eq"></div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-audio-item">
+								<a class="pr-audio-item__inner">
+									<div class="pr-audio-item__content">
+										<div class="pr-audio-item__text">
+											<p>Купала, Я. Трэба нам песень : верш [Гуказапіс]</p>
+										</div>
+										<div class="media-track">
+											<div class="media-track__tool">
+												<div class="media-track__btn media-track__play">&nbsp;</div>
+											</div>
+											<div class="media-track__eq"></div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
-
 		</div>
 
 		<div class="l-footer">
@@ -334,6 +784,11 @@
 	<link rel="stylesheet" href="js/lib/owl/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="js/lib/owl/assets/owl.theme.default.min.css">
 	<script type="text/javascript" src="js/lib/owl/owl.carousel.min.js"></script>
+
+	<!--swiper slider-->
+	<script src="js/lib/swiper/swiper.min.js"></script>
+	<!--matchHeight-->
+	<script src="js/lib/jquery.matchHeight-min.js"></script>
 
 	<script type="text/javascript" src="js/common.js"></script>
 </body>
