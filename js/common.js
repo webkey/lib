@@ -1114,7 +1114,23 @@ $(function () {
 
 				$thisSlider.on('initialized.owl.carousel', function () {
 					setSameHeight();
-					$('#videos').lightGallery();
+
+					var $lightGallery = $('.lg-row-slider-js');
+					var $lightGalleryVideo = $('.lg-video-row-slider-js');
+
+					if ($lightGallery.length) {
+						$.each($lightGallery, function () {
+							var $thisGallery = $(this);
+							lightGalleryImages($thisGallery);
+						})
+					}
+
+					if ($lightGalleryVideo.length) {
+						$.each($lightGalleryVideo, function () {
+							var $thisGallery = $(this);
+							lightGalleryVideos($thisGallery);
+						})
+					}
 				});
 
 				$thisSlider.owlCarousel({
@@ -1205,11 +1221,33 @@ $(function () {
 	}
 
 	booksSlidersInit();
-});
 
-$(function () {
+	function singleSlidersInit() {
+		var $rowSliderContainer = $('.single-slider-container-js');
+		if ($rowSliderContainer.length > 0) {
+
+			$.each($rowSliderContainer, function () {
+				var $thisSliderContainer = $(this);
+				var $thisSlider = $('.owl-carousel', $thisSliderContainer);
+				var $navContainer = $('.outside-nav-slider-js', $thisSliderContainer);
+
+				$thisSlider.owlCarousel({
+					items: 1,
+					slideBy: 1,
+					nav: true,
+					margin: 0,
+					navContainer: $navContainer,
+					navText: navArrowByCircle
+				});
+			})
+
+		}
+	}
+
+	singleSlidersInit();
+
 	function createMediaEq() {
-		var $eqContainer = $('.media-track__eq');
+		var $eqContainer = $('.eq-js');
 		var eqLength = 50;
 		var minSize = 0;
 		var maxSize = 50;
@@ -1233,10 +1271,7 @@ $(function () {
 	}
 
 	createMediaEq();
-});
 
-$(function () {
-	/*tape gallery*/
 	function tapeGalleryInit() {
 		var $tapeGalleryContainer = $('.tape-gallery-container-js');
 		if ($tapeGalleryContainer.length) {
@@ -1260,21 +1295,45 @@ $(function () {
 	}
 
 	tapeGalleryInit();
-});
 
-$(function () {
-	var $lightGallery = $('.light-gallery-js');
+	function lightGalleryInit() {
+		var $lightGallery = $('.lg-js');
+		var $lightGalleryVideo = $('.lg-video-js');
 
-	if ($lightGallery.length) {
-		$.each($lightGallery, function () {
-			var $thisGallery = $(this);
-			if(!$thisGallery.hasClass('.owl-carousel')){
-				$thisGallery.lightGallery({
-					thumbnail:true,
-					animateThumb: true,
-					showThumbByDefault: false
-				});
-			}
-		})
+		if ($lightGallery.length) {
+			$.each($lightGallery, function () {
+				var $thisGallery = $(this);
+				lightGalleryImages($thisGallery);
+			})
+		}
+
+		if ($lightGalleryVideo.length) {
+			$.each($lightGallery, function () {
+				var $thisGallery = $(this);
+				lightGalleryVideos($thisGallery);
+			})
+		}
+	}
+
+	lightGalleryInit();
+
+	function lightGalleryImages($thisGallery) {
+		$thisGallery.lightGallery({
+			thumbnail: true,
+			animateThumb: true,
+			showThumbByDefault: false,
+			download: false
+		});
+	}
+
+	function lightGalleryVideos($thisGallery) {
+		$thisGallery.lightGallery({
+			thumbnail: true,
+			animateThumb: true,
+			showThumbByDefault: false,
+			download: false,
+			autoplayControls: false,
+			zoom: false
+		});
 	}
 });
