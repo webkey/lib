@@ -1296,6 +1296,44 @@ $(function () {
 
 	tapeGalleryInit();
 
+	function galleryInit() {
+		var $gallery = $('.gallery-container-js');
+		if ($gallery.length) {
+			$gallery.each(function () {
+				var $thisGallery = $(this);
+				var $images = $('.gallery-js', $thisGallery);
+				var $titles = $('.gallery-captions-js', $thisGallery);
+				var $thisBtnNext = $('.swiper-button-next', $thisGallery);
+				var $thisBtnPrev = $('.swiper-button-prev', $thisGallery);
+				var $thisPagination = $('.swiper-pagination', $thisGallery);
+
+				var galleryTop = new Swiper($images, {
+					loop: true,
+					// grabCursor: true,
+					keyboardControl: false,
+
+					nextButton: $thisBtnNext,
+					prevButton: $thisBtnPrev,
+					pagination: $thisPagination,
+					paginationType: 'fraction'
+				});
+
+				var galleryThumbs = new Swiper($titles, {
+					loop: true,
+					effect: 'fade',
+					fade: {
+						crossFade: true
+					}
+				});
+
+				galleryTop.params.control = galleryThumbs;
+				galleryThumbs.params.control = galleryTop;
+			});
+		}
+	}
+
+	galleryInit();
+
 	function lightGalleryInit() {
 		var $lightGallery = $('.lg-js');
 		var $lightGalleryVideo = $('.lg-video-js');

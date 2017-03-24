@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" id="viewport" content="width=device-width">
+	
+	<title>Проекты - Карточка книги</title>
+	<meta name="description" content="*" />
+	<meta name="keywords" content="*" />
+	
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:site_name" content="" />
+
+	<!--swiper slider-->
+	<link rel="stylesheet" href="js/lib/swiper/swiper.min.css">
+	<!--light gallery-->
+	<link rel="stylesheet" href="js/lib/lg/css/lightgallery.min.css">
+
+	<link rel="stylesheet" href="css/reset.min.css" />
+	<link rel="stylesheet" href="css/flexboxgrid.min.css" />
+	<link rel="stylesheet" href="css/screen.css" />
+	<link rel="stylesheet" href="css/adaptive.css" />
+
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<script>
+		document.body.className += ' js';
+	</script>
+
+	<div class="page-wrap">
+
+		<div class="l-topnav">
+			<div class="menu-button js-sitemap-show">
+				<div class="menu-button__bg"></div>
+				<div class="ico-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<span>Весь сайт</span>
+			</div>
+
+			<ul class="topnav__menu">
+				<li class="hide-1024"><a href="#"><span>О библиотеке</span></a></li>
+				<li class="hide-1024"><a href="#"><span>Услуги</span></a></li>
+				<li class="hide-1024"><a href="#"><span>Инфоресурсы</span></a></li>
+				<li class="hide-1024"><a href="#"><span>Библиотекарям</span></a></li>
+				<li class="hide-580 topnav__accent">
+					<a href="#">
+						<svg class="svg" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<path d="M12,0C7,0,3,4,3,9c0,6.2,3.4,11.7,8.5,14.9c0.3,0.2,0.7,0.2,1.1,0C17.6,20.6,21,15.2,21,9C21,4,17,0,12,0z M12,13   c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,11.2,14.2,13,12,13z"/></svg>
+						<span>Адрес и режим работы</span>
+					</a>
+					<div class="l-schedule usercontent">
+						<div class="flex-row contact-abstract">
+							<div class="col-xs-12 col-sm-3 contact-aside">
+								<div class="contact-aside-img">
+									<img src="userimg/img-14.jpg" alt="">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-9">
+								<header>Национальная Библиотека Беларуси</header>
+								<br>
+								<div class="flex-row contact-content">
+									<div class="col-sm-12 col-md-6 col-lg-4">
+										<p>пр. Независимости, 116, г. Минск, 220114, Беларусь</p>
+
+										<p>тел.: (8 017) 266-37-02<br>
+										факс: (8 017) 266-37-06</p>
+
+										<p>Эл. почта: <a href="mailto:inbox@nlb.by">inbox@nlb.by</a></p>
+									</div>
+									<div class="col-sm-12 col-md-6 col-lg-4">
+										<p><b>Время работы</b></p>
+										<div class="table">
+											<div class="table-row">
+												<div class="table-cell">ПН – ПТ</div>
+												<div class="table-cell">10:00 – 21:00</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">СБ – ВС</div>
+												<div class="table-cell">10:00 – 18:00</div>
+											</div>
+										</div>
+										<p>Санитарный день — последний<br>понедельник каждого месяца</p>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4">
+										<p><b>Проезд:</b></p>
+										<p>
+											метро: станция «Усход»; <br>
+											автобус: № 25, 27, 34, 64, 77, 80, 87с, 89э, 91, 95, 113, 145с, 165, 921; <br>
+											троллейбус: № 41, 42. <br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<div class="topnav__aside">
+				
+				<div class="topnav__gain">
+					<a href="#" title="Версия для слабовидящих">
+						<svg class="svg" height="6.1433mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" viewBox="0 0 278 212" width="8.0433mm" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path class="fil0" d="M94 118c-8,-7 -18,-12 -29,-12 -12,0 -22,5 -29,12 -6,5 -9,12 -11,20l0 0c-1,3 -1,6 -1,9 0,12 4,22 12,29 7,8 17,13 29,13 11,0 21,-5 29,-13 7,-7 12,-17 12,-29 0,-11 -5,-21 -12,-29zm148 0c-7,-7 -18,-12 -29,-12 -11,0 -22,5 -29,12 -8,8 -12,18 -12,29 0,12 4,22 12,29 7,8 18,13 29,13 11,0 22,-5 29,-13 7,-7 12,-17 12,-29 0,-11 -5,-21 -12,-29zm-177 -35c17,0 33,6 45,18 19,12 39,12 58,-1 12,-11 28,-17 45,-17 15,0 29,5 40,14l0 -63c0,-2 -1,-5 -3,-7l-1 -1c-1,-1 -3,-2 -4,-2l-36 0c-7,0 -12,-6 -12,-12 0,-7 5,-12 12,-12l36 0c8,0 15,4 21,10 1,0 1,1 1,1 6,6 10,15 10,23l0 101c0,1 0,1 0,1 0,4 1,8 1,11 0,18 -8,34 -19,46 -12,12 -28,19 -46,19 -18,0 -34,-7 -46,-19 -11,-11 -18,-25 -19,-42l0 0 0 0c0,-1 0,-2 0,-4l0 -1c-2,-10 -17,-11 -18,3 -1,17 -8,33 -19,44 -12,12 -28,19 -46,19 -18,0 -34,-7 -46,-19 -12,-12 -19,-28 -19,-46 0,-4 0,-9 1,-13l0 -100c0,-8 4,-17 10,-23 0,0 1,-1 1,-1 6,-6 14,-10 22,-10l35 0c7,0 12,5 12,12 0,6 -5,12 -12,12l-35 0c-2,0 -3,1 -5,2l0 1c-3,2 -4,5 -4,7l0 62c11,-8 25,-13 40,-13z"/></svg>
+						<span class="hide-1400">Версия для слабовидящих</span>
+					</a>
+				</div>
+
+				<div class="topnav__lang">
+					<a href="#tmpl-login"><i class="lang__en"></i></a>
+				</div>
+
+				<div class="topnav__login">
+					<a href="#tmpl-login" title="Вход / Регистрация" class="js-popup-show" data-width="480">
+						<svg class="svg" enable-background="new 0 0 50 50" height="50px" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="25" cy="25" fill="none" r="24" stroke="#cccccc" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path class="path" d="M29.933,35.528c-0.146-1.612-0.09-2.737-0.09-4.21c0.73-0.383,2.038-2.825,2.259-4.888c0.574-0.047,1.479-0.607,1.744-2.818  c0.143-1.187-0.425-1.855-0.771-2.065c0.934-2.809,2.874-11.499-3.588-12.397c-0.665-1.168-2.368-1.759-4.581-1.759  c-8.854,0.163-9.922,6.686-7.981,14.156c-0.345,0.21-0.913,0.878-0.771,2.065c0.266,2.211,1.17,2.771,1.744,2.818  c0.22,2.062,1.58,4.505,2.312,4.888c0,1.473,0.055,2.598-0.091,4.21c-1.261,3.39-7.737,3.655-11.473,6.924  c3.906,3.933,10.236,6.746,16.916,6.746s14.532-5.274,15.839-6.713C37.688,39.186,31.197,38.93,29.933,35.528z"/></svg>
+						<span class="hide-1280">Вход / Регистрация</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<header class="l-header wrap">
+			<div class="flex-row">
+				<div class="col-xs-12 col-sm">
+
+					<a href="#" class="logo">
+						<img src="i/logo.png" alt="">
+						<span>Национальная Библиотека Беларуси</span>
+					</a>
+
+				</div>
+				<div class="col-xs-12 col-sm">
+
+					<div class="b-search">
+						<form action="/?asd">
+							<div class="search__submit">
+								<input type="submit" value="">
+								<svg class="svg" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#929292" id="icon-111-search"><path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z"/></g></g></svg>
+							</div>
+							<input type="search" name="search" id="search" class="search__input" placeholder="Поиск по сайту">
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+		<div class="l-imgheader">
+			<img src="userimg/p-imgheader-2.jpg" alt="" class="imgheader-img">
+			<div class="backnav backnav--black wrap">
+				<a href="#" title="Главная"><span>Главная</span></a>
+				<a href="#" title="О библиотеке"><span>О библиотеке</span></a>
+				<a href="#" title="Порядок пользования залом для групповых занятий отдела обслуживания специализированными фондами"><span>Порядок пользования залом для групповых занятий отдела обслуживания специализированными фондами</span></a>
+				<div class="mobmenu">
+					<select name="" id="">
+						<option value="">О библиотеке</option>
+						<optgroup label="О библиотеке">
+							<option value="">Часто задаваемые вопросы</option>
+							<option value="">Адрес и режим работы</option>
+							<option value="">Устав</option>
+							<option value="">Товарные знаки библиотеки</option>
+							<optgroup label="Товарные знаки библиотеки">
+								<option value="">Правила пользования Национальной библиотекой Беларуси</option>
+								<option value="">Порядок записи в библиотеку</option>
+								<option value="">Порядок проведения перерегистрации для читателей</option>
+								<option value="">Порядок обслуживания в читальных залах</option>
+								<option value="" class="active">Порядок пользования залом для групповых занятий отдела обслуживания специализированными фондами</option>
+								<option value="">Правила пользования информационными ресурсами Интернета в читальных залах</option>
+								<option value="">Порядок обслуживания пользователей документами на электронных носителях из фонда Национальной библиотеки Беларуси</option>
+								<option value="">Правила копирования информации</option>
+								<option value="">Порядок обслуживания пользователей в интернет-центре</option>
+								<option value="">Правила пользования индивидуальными кабинами, оборудованными персональным компьютером</option>
+								<option value="">Правила экскурсионного обслуживания</option>
+								<option value="">Правила пользования обзорной площадкой</option>
+								<option value="">Правила пользования детской комнатой</option>
+								<option value="">Правила пользования гардеробом</option>
+								<option value="">Правила пользования физкультурно-оздоровительным комплексом</option>
+								<option value="" disabled></option>
+							</optgroup>
+							<option value="">Вышестоящая организация</option>
+							<option value="">Обращения граждан и юридических лиц</option>
+							<option value="">Правила пользования и записи в библиотеку</option>
+							<option value="">Структура библиотеки</option>
+							<option value="">Читальные залы</option>
+							<option value="">История библиотеки</option>
+							<option value="">Известные имена</option>
+							<option value="">Современное состояние</option>
+							<option value="">Виртуальная экскурсия по библиотеке</option>
+							<option value="">Дары библиотеке</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="imgheader-content wrap">
+					<h1></h1>
+					<p></p>
+				</div>
+			</div>
+		</div>
+
+		<article class="l-fullpage pr-article">
+			<div class="article_aside-l">
+				<div class="article-aside-wrap">
+
+					<ul class="share share--vertical">
+						<li class="social-share social-fb"><a href="#" class="share-fb"><svg class="svg" baseProfile="tiny" height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z"/></svg></a></li>
+						<li class="social-share social-vk"><a href="#" class="share-vk"><svg class="svg" height="24" id="Layer_21" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21.54736,7H18.25688a.74281.74281,0,0,0-.65452.39156s-1.31237,2.41693-1.73392,3.231C14.73438,12.8125,14,12.125,14,11.10863V7.60417A1.10417,1.10417,0,0,0,12.89583,6.5h-2.474a1.9818,1.9818,0,0,0-1.751.8125s1.25626-.20312,1.25626,1.48958c0,.41974.02162,1.62723.04132,2.64a.72943.72943,0,0,1-1.273.50431,21.54029,21.54029,0,0,1-2.4982-4.54359A.69314.69314,0,0,0,5.5668,7C4.8532,7,3.42522,7,2.57719,7a.508.508,0,0,0-.47969.68481C3.00529,10.17487,6.91576,18,11.37917,18h1.87865A.74219.74219,0,0,0,14,17.25781V16.12342a.7293.7293,0,0,1,1.22868-.5315l2.24861,2.1127A1.08911,1.08911,0,0,0,18.223,18h2.95281c1.42415,0,1.42415-.98824.64768-1.75294-.54645-.53817-2.51832-2.61663-2.51832-2.61663A1.01862,1.01862,0,0,1,19.2268,12.307c.63737-.83876,1.67988-2.21175,2.122-2.79993C21.95313,8.70313,23.04688,7,21.54736,7Z"/></svg></a></li>
+						<li class="social-share social-tw"><a href="#" class="share-tw"><svg class="svg" enable-background="new 0 0 128 128" height="128px" id="Layer_1" version="1.1" viewBox="0 0 128 128" width="128px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M105,40.189c-2.943,1.306-6.105,2.188-9.428,2.584c3.39-2.031,5.99-5.248,7.217-9.08   c-3.171,1.881-6.684,3.247-10.422,3.983c-2.994-3.19-7.26-5.184-11.979-5.184c-9.065,0-16.414,7.349-16.414,16.412   c0,1.287,0.146,2.539,0.426,3.741C50.758,51.96,38.665,45.426,30.57,35.497c-1.413,2.423-2.223,5.243-2.223,8.251   c0,5.694,2.898,10.718,7.302,13.661c-2.69-0.085-5.222-0.824-7.434-2.054c-0.002,0.069-0.002,0.138-0.002,0.207   c0,7.954,5.657,14.584,13.166,16.093c-1.378,0.375-2.827,0.575-4.324,0.575c-1.058,0-2.086-0.103-3.088-0.295   c2.089,6.521,8.15,11.268,15.332,11.399c-5.617,4.401-12.694,7.024-20.384,7.024c-1.325,0-2.632-0.076-3.915-0.229 c7.263,4.657,15.892,7.374,25.16,7.374c30.188,0,46.697-25.01,46.697-46.698c0-0.711-0.018-1.42-0.049-2.123   C100.018,46.371,102.799,43.48,105,40.189" fill="#FFFFFF"/></svg></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="l-content usercontent wrap">
+				<div class="content-wrap maxwrap">
+					<div class="pre-title"><time datetime="2016-10-30">30 октября 2016</time> / Литература </div>
+					<h1>Через тернии к звездам</h1>
+					<h2>К 95-летию со дня рождения народного художника Беларуси Михаила Андреевича Савицкого (1922-2010)</h2>
+					<p><b>Михаил Андреевич Савицкий</b> — выдающийся живописец, педагог, общественный деятель. Народный художник СССР, народный художник Беларуси. Первый среди деятелей национальной культуры Герой Беларуси.</p>
+					<p>Родился в деревне Звенячи Толочинского района Витебской области БССР. Юность его совпала с годами Великой Отечественной войны. В возрасте двадцати лет участвовал в боях за Севастополь. Почти в самом начале войны оказался в концлагерях Дюссельдорфа, Бухенвальда и Дахау. 29 апреля 1945 года был освобожден из концлагеря Дахау американскими войсками.</p>
+					<p>Художественное образование получил после демобилизации из армии. В 1951 году окончил Минское художественное училище, затем учился в Московском художественном институте им. В. И. Сурикова (у Д. Мочальского), который окончил в 1957 году.</p>
+					<p>Жил и работал в Минске. Был руководителем государственного учреждения культуры «Творческие академические мастерские живописи, графики и скульптуры».</p>
+					<p>Скончался на 89-м году жизни 8 ноября 2010 года.</p>
+					<p>Награжден орденом Франциска Скорины (1997). Являлся членом Международной славянской академии.</p>
+				</div>
+			</div>
+
+			<section class="project-row content-wrap">
+				<div class="wrap gallery-container-js">
+					<header class="pr-header content-wrap maxwrap">
+						<div class="pr-header__holder">
+							<h2>Фотоальбом</h2>
+						</div>
+					</header>
+					<div class="gallery">
+						<div class="gallery__visual">
+							<div class="swiper-container gallery-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-23.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-04.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-06.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-07.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-08.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-09.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-10.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-11.jpg" alt="image description" /> </div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__inner">
+											<img src="userimg/p-img-12.jpg" alt="image description" /> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination swiper-pagination-fraction gallery__pagination">
+							<span class="swiper-pagination-current">2</span> / <span class="swiper-pagination-total">10</span>
+						</div>
+						<div class="gallery__captions">
+							<div class="swiper-button-prev">
+								<div class="slider-button-circle">
+									<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M11.262,16.714l9.002,8.999  c0.395,0.394,1.035,0.394,1.431,0c0.395-0.394,0.395-1.034,0-1.428L13.407,16l8.287-8.285c0.395-0.394,0.395-1.034,0-1.429  c-0.395-0.394-1.036-0.394-1.431,0l-9.002,8.999C10.872,15.675,10.872,16.325,11.262,16.714z" fill="#000" fill-rule="evenodd"/></svg><span>Назад</span>
+								</div>
+							</div>
+							<div class="swiper-button-next">
+								<div class="slider-button-circle">
+									<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M21.698,15.286l-9.002-8.999  c-0.395-0.394-1.035-0.394-1.431,0c-0.395,0.394-0.395,1.034,0,1.428L19.553,16l-8.287,8.285c-0.395,0.394-0.395,1.034,0,1.429  c0.395,0.394,1.036,0.394,1.431,0l9.002-8.999C22.088,16.325,22.088,15.675,21.698,15.286z" fill="#000" fill-rule="evenodd"/></svg><span>Вперед</span>
+								</div>
+							</div>
+							<div class="swiper-container gallery-captions-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>Савицкий с юными художниками. 1976</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>К 95-летию со дня рождения народного художника Беларуси Михаила Андреевича Савицкого (1922-2010)</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>Купала, Я. Трэба нам песень : верш [Гуказапіс]</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>К 95-летию со дня рождения народного художника Беларуси Михаила Андреевича Савицкого (1922-2010)</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>C 7 февраля 2017 г. Интерактивная выставка восковых фигур «Сказочное путешествие»</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>Купала, Я. Трэба нам песень : верш [Гуказапіс]</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>Мероприятие детской комнаты «Праздник мужества и чести»</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>Савицкий с юными художниками. 1976</p>
+										</div>
+									</div>
+									<div class="swiper-slide gallery__caption">
+										<div class="swiper-slide__inner">
+											<p>Марафон мастер-классов к 500-летию белорусского книгопечатания</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="l-content usercontent wrap">
+				<div class="content-wrap maxwrap">
+					<p>Родился в деревне Звенячи Толочинского района Витебской области БССР. Юность его совпала с годами Великой Отечественной войны. В возрасте двадцати лет участвовал в боях за Севастополь. Почти в самом начале войны оказался в концлагерях Дюссельдорфа, Бухенвальда и Дахау. 29 апреля 1945 года был освобожден из концлагеря Дахау американскими войсками.</p>
+					<p>Художественное образование получил после демобилизации из армии. В 1951 году окончил Минское художественное училище, затем учился в Московском художественном институте им. В. И. Сурикова (у Д. Мочальского), который окончил в 1957 году.</p>
+					<p>Жил и работал в Минске. Был руководителем государственного учреждения культуры «Творческие академические мастерские живописи, графики и скульптуры».</p>
+					<p>Скончался на 89-м году жизни 8 ноября 2010 года.</p>
+					<p>Награжден орденом Франциска Скорины (1997). Являлся членом Международной славянской академии.</p>
+				</div>
+			</div>
+
+			<section class="project-row">
+				<div class="tape-gallery-container-js">
+					<div class="content-wrap">
+						<div class="wrap">
+							<header class="pr-header">
+								<div class="pr-slider-tool outside-nav-slider-js nav-circle">
+									<div class="swiper-button-prev">
+										<div class="slider-button-circle">
+											<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M11.262,16.714l9.002,8.999  c0.395,0.394,1.035,0.394,1.431,0c0.395-0.394,0.395-1.034,0-1.428L13.407,16l8.287-8.285c0.395-0.394,0.395-1.034,0-1.429  c-0.395-0.394-1.036-0.394-1.431,0l-9.002,8.999C10.872,15.675,10.872,16.325,11.262,16.714z" fill="#000" fill-rule="evenodd"/></svg><span>Назад</span>
+										</div>
+									</div>
+									<div class="swiper-button-next">
+										<div class="slider-button-circle">
+											<svg class="owl-svg" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M21.698,15.286l-9.002-8.999  c-0.395-0.394-1.035-0.394-1.431,0c-0.395,0.394-0.395,1.034,0,1.428L19.553,16l-8.287,8.285c-0.395,0.394-0.395,1.034,0,1.429  c0.395,0.394,1.036,0.394,1.431,0l9.002-8.999C22.088,16.325,22.088,15.675,21.698,15.286z" fill="#000" fill-rule="evenodd"/></svg><span>Вперед</span>
+										</div>
+									</div>
+								</div>
+								<div class="pr-header__holder">
+									<h2>Основные работы</h2>
+								</div>
+							</header>
+						</div>
+					</div>
+					<div class="tape-gallery">
+						<div class="swiper-container">
+							<div class="tape-gallery__list swiper-wrapper lg-js">
+								<div class="swiper-slide" data-src="userimg/p-img-24.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Вiцебскiя вароты. 1967</p><p>Витебские ворота. 1967</p><p>Vitebsk Gate. 1967</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-24.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-25.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-25.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-26.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-26.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-27.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-27.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-28.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-28.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-29.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-29.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-07.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Вiцебскiя вароты. 1967</p><p>Витебские ворота. 1967</p><p>Vitebsk Gate. 1967</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-07.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-08.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-08.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-09.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-09.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-10.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-10.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-11.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-11.jpg" alt="image description" /></div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-src="userimg/p-img-12.jpg" data-sub-html="<h4>Витебские ворота.1967</h4><p>Subtitle</p>">
+									<a href="#">
+										<div class="tape-gallery__img"><img src="userimg/p-img-12.jpg" alt="image description" /></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="l-content usercontent wrap">
+				<div class="content-wrap maxwrap">
+					<p>Родился в деревне Звенячи Толочинского района Витебской области БССР. Юность его совпала с годами Великой Отечественной войны. В возрасте двадцати лет участвовал в боях за Севастополь. Почти в самом начале войны оказался в концлагерях Дюссельдорфа, Бухенвальда и Дахау. 29 апреля 1945 года был освобожден из концлагеря Дахау американскими войсками.</p>
+					<p>Художественное образование получил после демобилизации из армии. В 1951 году окончил Минское художественное училище, затем учился в Московском художественном институте им. В. И. Сурикова (у Д. Мочальского), который окончил в 1957 году.</p>
+					<p>Жил и работал в Минске. Был руководителем государственного учреждения культуры «Творческие академические мастерские живописи, графики и скульптуры».</p>
+					<p>Скончался на 89-м году жизни 8 ноября 2010 года.</p>
+					<p>Награжден орденом Франциска Скорины (1997). Являлся членом Международной славянской академии.</p>
+				</div>
+			</div>
+
+			<section class="project-row content-wrap">
+				<div class="wrap">
+					<div class="content-images single-img">
+						<figure>
+							<div class="content-images__align lg-js">
+								<div class="content-image" data-src="userimg/p-img-30.jpg" data-sub-html="<h4>Савицкий с юными художниками</h4><p>1976</p>">
+									<img src="userimg/p-img-30.jpg" alt="image description"/>
+								</div>
+							</div>
+							<figcaption>Савицкий с юными художниками. 1976</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<div class="l-content usercontent wrap">
+				<div class="content-wrap maxwrap">
+					<p>Родился в деревне Звенячи Толочинского района Витебской области БССР. Юность его совпала с годами Великой Отечественной войны. В возрасте двадцати лет участвовал в боях за Севастополь. Почти в самом начале войны оказался в концлагерях Дюссельдорфа, Бухенвальда и Дахау. 29 апреля 1945 года был освобожден из концлагеря Дахау американскими войсками. Художественное образование получил после демобилизации из армии. В 1951 году окончил Минское художественное училище, затем учился в Московском художественном институте им. В. И. Сурикова (у Д. Мочальского), который окончил в 1957 году. Жил и работал в Минске. Был руководителем государственного учреждения культуры «Творческие академические мастерские живописи, графики и скульптуры». Скончался на 89-м году жизни 8 ноября 2010 года. Награжден орденом Франциска Скорины (1997). Являлся членом Международной славянской академии.</p>
+				</div>
+			</div>
+
+			<section class="project-row content-wrap">
+				<div class="wrap">
+					<div class="content-images several-img">
+						<figure>
+							<div class="align-img lg-js">
+								<div class="content-image" data-src="userimg/p-img-31.jpg" data-sub-html="<h4>Савицкий с юными художниками</h4><p>1976</p>">
+									<img src="userimg/p-img-31.jpg" alt="image description"/>
+								</div>
+								<div class="content-image" data-src="userimg/p-img-32.jpg" data-sub-html="<h4>Савицкий с юными художниками</h4><p>1976</p>">
+									<img src="userimg/p-img-32.jpg" alt="image description"/>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<div class="l-content usercontent wrap">
+				<div class="content-wrap maxwrap">
+					<p>Родился в деревне Звенячи Толочинского района Витебской области БССР. Юность его совпала с годами Великой Отечественной войны. В возрасте двадцати лет участвовал в боях за Севастополь. Почти в самом начале войны оказался в концлагерях Дюссельдорфа, Бухенвальда и Дахау. 29 апреля 1945 года был освобожден из концлагеря Дахау американскими войсками. Художественное образование получил после демобилизации из армии. В 1951 году окончил Минское художественное училище, затем учился в Московском художественном институте им. В. И. Сурикова (у Д. Мочальского), который окончил в 1957 году. Жил и работал в Минске. Был руководителем государственного учреждения культуры «Творческие академические мастерские живописи, графики и скульптуры». Скончался на 89-м году жизни 8 ноября 2010 года. Награжден орденом Франциска Скорины (1997). Являлся членом Международной славянской академии.</p>
+				</div>
+			</div>
+
+			<section class="project-row content-wrap">
+				<div class="wrap row-slider-container-js">
+					<header class="pr-header">
+						<div class="pr-slider-tool outside-nav-slider-js nav-circle">&nbsp;</div>
+						<div class="pr-header__holder">
+							<h2>Издания</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
+					</header>
+					<div class="pr-announce">
+						<div class="pr-announce__list owl-carousel">
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-33.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Война 1812 г. на территории беларуси</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-34.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Хроника мероприятий к 200-летию военных событий 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-35.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-01.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-02.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/img-15.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-row content-wrap bg--dark">
+				<div class="wrap row-slider-container-js">
+					<header class="pr-header">
+						<div class="pr-slider-tool outside-nav-slider-js nav-circle">&nbsp;</div>
+						<div class="pr-header__holder">
+							<h2>Другие художники</h2>
+							<div class="pr-header__foot">
+								<a href="#">Смотреть все</a>
+							</div>
+						</div>
+					</header>
+					<div class="pr-announce">
+						<div class="pr-announce__list owl-carousel">
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-36.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Война 1812 г. на территории беларуси</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-37.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Хроника мероприятий к 200-летию военных событий 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-38.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Библиотека И.Х. Колодеева – уникальная коллекция реликвий войны 1812 г.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-01.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/p-img-02.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pr-announce-item">
+								<a href="#" class="pr-announce-item__inner">
+									<div class="pr-announce-item__img">
+										<div class="pr-announce-item__figure">
+											<img src="userimg/img-15.jpg" alt="image description"/>
+										</div>
+									</div>
+									<div class="pr-announce-item__content">
+										<div class="pr-announce-item__text">
+											<p>Издания 1812–1912 гг.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+
+		<div class="l-footer">
+
+			<div class="l-footbar">
+				<ul>
+					<li><a href="#">
+						<svg class="svg" enable-background="new 0 0 24 24" height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M23,6h-8V1c0-0.6-0.4-1-1-1H1C0.4,0,0,0.4,0,1v23h24V7C24,6.4,23.6,6,23,6z M22,8v14h-7V8H22z M13,2v5v15h-3v-5H5v5H2V2H13   z M6,22v-4h3v4H6z"/><path d="M7,4H4v3h3V4z M6,6H5V5h1V6z"/><path d="M7,8H4v3h3V8z M6,10H5V9h1V10z"/><path d="M7,12H4v3h3V12z M6,14H5v-1h1V14z"/><path d="M11,4H8v3h3V4z M10,6H9V5h1V6z"/><path d="M11,8H8v3h3V8z M10,10H9V9h1V10z"/><path d="M11,12H8v3h3V12z M10,14H9v-1h1V14z"/><path d="M20,10h-3v3h3V10z M19,12h-1v-1h1V12z"/><path d="M20,14h-3v3h3V14z M19,16h-1v-1h1V16z"/></svg>
+						<span>Задать вопрос</span>
+					</a></li>
+					<li><a href="#">
+						<svg class="svg" enable-background="new 0 0 24 24" height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M23,6h-8V1c0-0.6-0.4-1-1-1H1C0.4,0,0,0.4,0,1v23h24V7C24,6.4,23.6,6,23,6z M22,8v14h-7V8H22z M13,2v5v15h-3v-5H5v5H2V2H13   z M6,22v-4h3v4H6z"/><path d="M7,4H4v3h3V4z M6,6H5V5h1V6z"/><path d="M7,8H4v3h3V8z M6,10H5V9h1V10z"/><path d="M7,12H4v3h3V12z M6,14H5v-1h1V14z"/><path d="M11,4H8v3h3V4z M10,6H9V5h1V6z"/><path d="M11,8H8v3h3V8z M10,10H9V9h1V10z"/><path d="M11,12H8v3h3V12z M10,14H9v-1h1V14z"/><path d="M20,10h-3v3h3V10z M19,12h-1v-1h1V12z"/><path d="M20,14h-3v3h3V14z M19,16h-1v-1h1V16z"/></svg>
+						<span>Помощь</span>
+					</a></li>
+					<li><a href="#">
+						<svg class="svg" enable-background="new 0 0 24 24" height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M23,6h-8V1c0-0.6-0.4-1-1-1H1C0.4,0,0,0.4,0,1v23h24V7C24,6.4,23.6,6,23,6z M22,8v14h-7V8H22z M13,2v5v15h-3v-5H5v5H2V2H13   z M6,22v-4h3v4H6z"/><path d="M7,4H4v3h3V4z M6,6H5V5h1V6z"/><path d="M7,8H4v3h3V8z M6,10H5V9h1V10z"/><path d="M7,12H4v3h3V12z M6,14H5v-1h1V14z"/><path d="M11,4H8v3h3V4z M10,6H9V5h1V6z"/><path d="M11,8H8v3h3V8z M10,10H9V9h1V10z"/><path d="M11,12H8v3h3V12z M10,14H9v-1h1V14z"/><path d="M20,10h-3v3h3V10z M19,12h-1v-1h1V12z"/><path d="M20,14h-3v3h3V14z M19,16h-1v-1h1V16z"/></svg>
+						<span>Карта сайта</span>
+					</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-in flex-row">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<a href="#" class="logo footer__logo">
+						<img src="i/logo.png" alt="">
+						<span>Национальная Библиотека Беларуси</span>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+
+					<ul class="footer__menu">
+						<li><a href="#"><span>О библиотеке</span></a></li>
+						<li><a href="#"><span>Услуги</span></a></li>
+						<li><a href="#"><span>Новости</span></a></li>
+						<li><a href="#"><span>Информационные ресурсы</span></a></li>
+						<li><a href="#"><span>Библиотекарям</span></a></li>
+						<li><a href="#"><span>Контакты</span></a></li>
+					</ul>
+
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 footer__contact">
+
+					<p>Просп. Независимости, 116, г. Минск, Республика Беларусь, 220114</p>
+					<p>Тел.: <a href="tel:+375172663706">+375 (17) 266-37-37</a></p>
+					<p>Факс: +375 (17) 266-37-06</p>
+					<p>Эл. почта: <a href="mailto:nlb@gmail.com">nlb@gmail.com</a></p>
+
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">{{socials}}</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script src="js/ext/jquery.min.js"></script>
+	<script src="js/ext/TweenMax.min.js"></script>
+	<script src="js/ext/jquery.scrollTo.min.js"></script>
+	<script src="js/ext/isotope.pkgd.min.js"></script>
+	<script src="js/lib/jquery-html5-loader/jquery.html5-loader-1.8.0.js"></script>
+	<script src="js/lib/modernizr-custom.js"></script>
+	<script src="js/lib/jquery.debouncedresize.js"></script>
+	<script src="js/lib/jquery.throttledresize.js"></script>
+	<script src="js/lib/jquery.easing.1.3.js"></script>
+	<script src="js/lib/jquery.fitvids.js"></script>
+	<script src="js/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="js/lib/smoothscroll.js"></script>
+	<script src="js/lib/parsley.min.js"></script>
+	<script src="js/lib/readmore/readmore.min.js"></script>
+	<script src="js/lib/jquery.sticky-kit.min.js"></script>
+
+	<!-- http://iamdustan.com/smoothscroll/ -->
+	<script src="js/lib/sly/sly.min.js"></script>
+
+	<!-- owl -->
+	<link rel="stylesheet" href="js/lib/owl/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="js/lib/owl/assets/owl.theme.default.min.css">
+	<script type="text/javascript" src="js/lib/owl/owl.carousel.min.js"></script>
+
+	<!--swiper slider-->
+	<script src="js/lib/swiper/swiper.min.js"></script>
+	<!--matchHeight-->
+	<script src="js/lib/jquery.matchHeight-min.js"></script>
+	<!--light gallery-->
+	<script src="js/lib/lg/js/lightgallery.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-fullscreen.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-thumbnail.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-video.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-autoplay.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-zoom.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-hash.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-pager.min.js"></script>
+	<script src="js/lib/lg/plugins/lg-share.min.js"></script>
+
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
