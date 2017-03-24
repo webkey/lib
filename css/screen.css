@@ -5972,12 +5972,13 @@ hr {
 LIB PROJECT
 ==========================================================*/
 
-.l-imgheader {
+.l-imgheader{
 	position: relative;
 	background: #000;
 	color: #fff;
 	padding-top: 1rem;
 	margin-bottom: 5rem;
+	overflow: hidden;
 }
 
 .imgheader-img {
@@ -5992,6 +5993,15 @@ LIB PROJECT
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.bg--blur .imgheader-img{
+	-webkit-filter: sepia(0.5) blur(6px);
+	filter: sepia(0.5) blur(6px);
+	width: calc(100% + 20px);
+	height: calc(100% + 20px);
+	top: -10px;
+	left: -10px;
 }
 
 .imgheader-content {
@@ -7466,3 +7476,107 @@ LIB PROJECT
 	width: calc(49% - 10px);
 	margin: 0 5px;
 }
+
+/*project card*/
+.pr-card{
+	margin-bottom: 3em;
+}
+.pr-card:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.pr-card__title{
+	padding-bottom: 3em;
+}
+.pr-card__title h1,
+.pr-card__title h2{
+	text-align: left;
+	width: auto;
+	max-width: none;
+}
+.pr-card__title h1 + h2{
+	padding: 0;
+}
+
+.pr-card__title,
+.pr-card__content{
+	float: right;
+	width: 60%;
+	min-height: 50px;
+}
+.pr-card__visual{
+	width: 40%;
+}
+
+.pr-card__visual{
+	float: left;
+	box-sizing: border-box;
+	padding-right: 6%;
+	text-align: center;
+	min-height: 50px;
+}
+.pr-card__figure{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	background-color: black;
+	cursor: pointer;
+}
+.pr-card__figure:hover{
+	cursor: url(../userimg/cursor-zoom.png), zoom-out;
+}
+.pr-card__img{
+	display: block;
+}
+.pr-card__img img{
+	display: block;
+	max-width: 100%;
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.pr-card__figure:hover img{
+	opacity: 0.55;
+}
+
+.pr-card__description{
+	border: solid #ddd;
+	border-width: 1px 0;
+	padding: 30px 0;
+}
+.pr-card__description > *:last-child{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.pr-card__widget{
+	padding-bottom: 35px;
+}
+.pr-card__widget > *:last-child{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 991px){
+	.pr-card__title h1{
+		font-size: 38px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.article_aside-l{
+		display: none;
+	}
+	.pr-card__title,
+	.pr-card__content,
+	.pr-card__visual{
+		float: none;
+		width: auto;
+		min-height: 0;
+	}
+	.pr-card__visual{
+		padding-right: 0;
+		padding-bottom: 2em;
+	}
+}
+/*project card end*/
