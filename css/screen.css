@@ -6072,6 +6072,8 @@ LIB PROJECT
 .project-row {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
+	font-size: 16px;
+	line-height: 1.625;
 }
 
 .project-row .wrap {
@@ -6414,6 +6416,9 @@ LIB PROJECT
 .pr-header{
 	margin-bottom: 30px;
 }
+.bg--dark .pr-header{
+	color: white;
+}
 .pr-header .pr-slider-tool{
 	width: 94px;
 	display: inline-block;
@@ -6436,6 +6441,9 @@ LIB PROJECT
 }
 .bg--dark .pr-header h2{
 	color: white;
+}
+.pr-header p{
+	padding-top: 10px;
 }
 .pr-header__foot{ margin-top: 5px; }
 .pr-header__foot a{
@@ -6873,7 +6881,7 @@ LIB PROJECT
 }
 .pr-pict-item__figure img {
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 50%;
 	min-height: 0;
 	min-width: 0;
@@ -6883,9 +6891,9 @@ LIB PROJECT
 	max-height: none;
 	-o-object-fit: cover;
 	object-fit: cover;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
 }
 .pr-pict-item__figure.vertical-fit img {
 	width: auto !important;
@@ -7132,6 +7140,8 @@ LIB PROJECT
 	white-space: nowrap;
 	-ms-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+	position: relative;
+	max-width: 90%;
 }
 .lg-sub-html p{
 	font-size: 14px;
@@ -7141,6 +7151,8 @@ LIB PROJECT
 	white-space: nowrap;
 	-ms-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+	position: relative;
+	max-width: 90%;
 }
 .lg-actions .lg-next,
 .lg-actions .lg-prev {
@@ -7240,7 +7252,7 @@ LIB PROJECT
 	display: inline-block;
 	vertical-align: top;
 	width: 33.3%;
-	padding: 0 15px 20px;
+	padding: 0 15px 30px;
 	/*fix before js loaded end*/
 	font-size: 16px;
 	line-height: 1.625;

@@ -773,6 +773,8 @@ var Regform = {
 				}
                 $input.trigger('change');
             });
+		} else {
+			$input.data('parsley-remote-message', data.error_message);
 		}
 
 		return !data.error;
@@ -1457,4 +1459,33 @@ $(function () {
 			zoom: false
 		});
 	}
+
+	function libcardFormInit() {
+		var $libcardForm = $('.js-libcard-form');
+		if ($libcardForm.length > 0) {
+			// console.info('Found libcard form. Initializing...');
+			$libcardForm.ajaxForm({
+				beforeSubmit: function (formData, $form, options) {
+					var $result = $form.find('.js-result');
+					if ($result.length == 0) {
+						$result = $form.parent().find('.js-result');
+					}
+
+					$form.find('input[type="submit"], button[type="submit"]').attr('disabled', true);
+					$result.html('');
+				},
+				success: function (responseText, statusText, xhr, $form) {
+					var $result = $form.find('.js-result');
+					if ($result.length == 0) {
+						$result = $form.parent().find('.js-result');
+					}
+
+					$form.find('input[type="submit"], button[type="submit"]').attr('disabled', false);
+					$result.html(responseText);
+				}
+			});
+		}
+	}
+
+	libcardFormInit();
 });
